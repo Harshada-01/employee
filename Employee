@@ -1,0 +1,18 @@
+#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+void main()
+{
+struct Employee
+{
+int empno;
+char name[30];
+float salary;
+char designation[30];
+};
+struct Employee emp1={100,&quot;sanjay&quot;,50000,&quot;Manager&quot;};
+printf(&quot;\nEmployee number: %d&quot;,emp1.empno);
+printf(&quot;\nEmployee name: %s&quot;,emp1.name);
+printf(&quot;\nEmployee salary: %f&quot;,emp1.salary);
+printf(&quot;\nEmployee designation: %s&quot;,emp1.designation);
+getch();
+}
