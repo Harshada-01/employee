@@ -1,18 +1,42 @@
-#include&lt;stdio.h&gt;
-#include&lt;conio.h&gt;
-void main()
+#include <stdio.h>
+#include <stdlib.h>
+ 
+typedef struct{
+    char name[30];
+    int age;
+    float phno;
+    double salary;
+} Employee;
+ 
+int main()
 {
-struct Employee
-{
-int empno;
-char name[30];
-float salary;
-char designation[30];
-};
-struct Employee emp1={100,&quot;sanjay&quot;,50000,&quot;Manager&quot;};
-printf(&quot;\nEmployee number: %d&quot;,emp1.empno);
-printf(&quot;\nEmployee name: %s&quot;,emp1.name);
-printf(&quot;\nEmployee salary: %f&quot;,emp1.salary);
-printf(&quot;\nEmployee designation: %s&quot;,emp1.designation);
-getch();
-}
+    
+    int n=20;
+    
+    Employee employees[n];
+ 
+    
+    printf("Enter %d Employee Details \n \n",n);
+    for(int i=0; i<n; i++){
+        printf("Employee %d:- \n",i+1);
+
+        
+        printf("Name: ");
+        scanf("%[^\n]s",employees[i].name);
+
+
+        printf("Age: ");
+        scanf("%d",&employees[i].age);
+        
+        printf("Phone Number: ");
+        scanf("%f",&employees[i].phno);
+
+       
+        printf("Salary: ");
+        scanf("%lf",&employees[i].salary);
+
+
+        char ch = getchar();
+ 
+        printf("\n");
+    }
